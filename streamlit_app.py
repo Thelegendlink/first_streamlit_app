@@ -50,7 +50,7 @@ def get_fruit_load_list():
     my_cur.execute("SELECT * from PC_RIVERY_DB.public.fruit_load_list;")
     return my_cur.fetchall()
 
-streamlit.header("The fruit load list contains:")
+streamlit.header("View Our Fruit List, Add Your Favorites!")
 #Add a button to load the fruit list
 if streamlit.button('Get fruit load list'):
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
